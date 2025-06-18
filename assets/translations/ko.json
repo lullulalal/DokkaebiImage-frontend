@@ -1,0 +1,19 @@
+{
+  "introduce_header": "흥미롭고 재미있는 이미지 도구를 사용해보세요!",
+  "introduce": "원하는 도구를 클릭하면 자세한 내용을 보고 바로 사용해볼 수 있어요.",
+  "tool1": "Color Transfer",
+  "tool1_description": "한 이미지의 색상을 다른 이미지에 적용하여 스타일을 맞추고 시각적 조화를 이룹니다.",
+  "tool2": "Remove Noise",
+  "tool2_description": "이미지의 노이즈를 줄여 선명도와 디테일을 향상시키고, 더 깔끔하게 만듭니다.",
+  "tool3": "Perspective Correction",
+  "tool3_description": "이미지의 원근감을 보정하여 더 자연스럽고 정렬된 모습으로 만듭니다.",
+  "tool4": "Content-aware Resize",
+  "tool4_description": "중요하지 않은 픽셀을 제거하며 이미지를 리사이즈하여 핵심 내용을 안전하게 유지합니다.",
+  "tool5": "Saliency-aware Cropping",
+  "tool5_description": "가장 중요한 부분이 중심에 오도록 이미지를 자동으로 잘라냅니다.",
+  "explain_header": "도깨비(Dokkaebi)란?",
+  "explain": "도깨비는 한국 전통 속 신비한 존재로, 밤에 나타나 장난을 치거나 사람들을 놀라게 하기도 하고, 때론 도움을 주기도 합니다.\n\n이 웹앱도 도깨비처럼 엉뚱하고 유쾌한 이미지 도구들로 가득해요. \"어? 이런 것도 돼?\" 혹은 \"이거 웃기네 ㅋㅋ\" 같은 반응을 기대할 수 있어요.\n\n여기 있는 기능들은 모두에게 필요한 건 아닐 수도 있지만, 누군가에게는 꽤 유용할 수 있답니다.\n\n재미있는 아이디어나 흥미로운 논문을 발견하면 새로운 기능도 계속 추가할 예정이에요.\n좋은 아이디어가 있다면 언제든지 편하게 제안해주세요!",
+  "privacy_policy": "개인정보 처리방침",
+  "terms_of_use": "이용 약관",
+  "cookie_preferences": "쿠키 설정"
+}

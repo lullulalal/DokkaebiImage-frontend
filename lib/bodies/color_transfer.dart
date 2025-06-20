@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:DokkaebieImage/constants/api_constants.dart';
-import 'package:DokkaebieImage/bodies/common_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
+
+import 'package:DokkaebieImage/constants/api_constants.dart';
+import 'package:DokkaebieImage/bodies/common/common_widgets.dart';
+import 'package:DokkaebieImage/bodies/common/common_functions.dart';
 
 class ColorTransferBody extends StatefulWidget {
   const ColorTransferBody({super.key});
@@ -34,16 +36,16 @@ class _ColorTransferBodyState extends State<ColorTransferBody> {
   }
 
   Future<void> _pickImages() async {
-    final newImages = await CommonWidgets.pickImages(max: 6 - _images.length);
+    final newImages = await CommonFunctions.pickImages(max: 6 - _images.length);
     setState(() => _images.addAll(newImages));
   }
 
   void _removeImage(String name) => setState(() => _images.remove(name));
 
   void _downloadImage(String name, Uint8List data) =>
-      CommonWidgets.downloadImage(name, data);
+      CommonFunctions.downloadImage(name, data);
 
-  void _downloadZip() => CommonWidgets.downloadZipWithInterop(
+  void _downloadZip() => CommonFunctions.downloadZipWithInterop(
     _downloadableZip!,
     'result_color_transfer.zip',
   );
@@ -57,7 +59,7 @@ class _ColorTransferBodyState extends State<ColorTransferBody> {
     });
 
     try {
-      final (zip, images) = await CommonWidgets.sendMultipartRequest(
+      final (zip, images) = await CommonFunctions.sendMultipartRequest(
         url: Uri.parse(ApiConstants.colorTransfer),
         targets: _images,
         referenceImage: _referenceImage,

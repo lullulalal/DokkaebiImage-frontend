@@ -3,10 +3,12 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:DokkaebieImage/constants/api_constants.dart';
-import 'package:DokkaebieImage/bodies/common_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
+
+import 'package:DokkaebieImage/constants/api_constants.dart';
+import 'package:DokkaebieImage/bodies/common/common_widgets.dart';
+import 'package:DokkaebieImage/bodies/common/common_functions.dart';
 
 class NoiseRemoverBody extends StatefulWidget {
   const NoiseRemoverBody({super.key});
@@ -22,16 +24,16 @@ class _NoiseRemoverBodyState extends State<NoiseRemoverBody> {
   Map<String, Uint8List> _resultImages = {};
 
   Future<void> _pickImages() async {
-    final newImages = await CommonWidgets.pickImages(max: 6 - _images.length);
+    final newImages = await CommonFunctions.pickImages(max: 6 - _images.length);
     setState(() => _images.addAll(newImages));
   }
 
   void _removeImage(String name) => setState(() => _images.remove(name));
 
   void _downloadImage(String name, Uint8List data) =>
-      CommonWidgets.downloadImage(name, data);
+      CommonFunctions.downloadImage(name, data);
 
-  void _downloadZip() => CommonWidgets.downloadZipWithInterop(
+  void _downloadZip() => CommonFunctions.downloadZipWithInterop(
     _downloadableZip!,
     'result_noise_remover.zip',
   );
@@ -45,7 +47,7 @@ class _NoiseRemoverBodyState extends State<NoiseRemoverBody> {
     });
 
     try {
-      final (zip, images) = await CommonWidgets.sendMultipartRequest(
+      final (zip, images) = await CommonFunctions.sendMultipartRequest(
         url: Uri.parse(ApiConstants.noiseRemover),
         targets: _images,
       );

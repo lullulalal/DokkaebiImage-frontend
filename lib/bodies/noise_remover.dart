@@ -6,9 +6,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/gestures.dart';
 
-import 'package:DokkaebieImage/constants/api_constants.dart';
-import 'package:DokkaebieImage/bodies/common/common_widgets.dart';
-import 'package:DokkaebieImage/bodies/common/common_functions.dart';
+import '../constants/api_constants.dart';
+import './common/common_widgets.dart';
+import './common/common_functions.dart';
 
 class NoiseRemoverBody extends StatefulWidget {
   const NoiseRemoverBody({super.key});

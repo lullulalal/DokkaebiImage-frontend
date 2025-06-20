@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-import 'package:DokkaebieImage/bodies/color_transfer.dart';
-import 'package:DokkaebieImage/bodies/noise_remover.dart';
-import 'package:DokkaebieImage/bodies/main_contents.dart';
+import './bodies/color_transfer.dart';
+import './bodies/noise_remover.dart';
+import './bodies/main_contents.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

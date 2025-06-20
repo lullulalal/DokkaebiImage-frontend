@@ -8,8 +8,8 @@ import 'package:DokkaebieImage/footer/privacy_policy.dart';
 import 'package:DokkaebieImage/footer/cookie_preferences.dart';
 import 'package:DokkaebieImage/footer/terms_of_use.dart';
 
-import 'package:DokkaebieImage/body/color_transfer.dart';
-import 'package:DokkaebieImage/body/noise_remover.dart';
+import 'package:DokkaebieImage/bodies/color_transfer.dart';
+import 'package:DokkaebieImage/bodies/noise_remover.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

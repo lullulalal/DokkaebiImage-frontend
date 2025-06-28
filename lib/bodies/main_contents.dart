@@ -159,7 +159,7 @@ class MainContentBody extends StatelessWidget {
                         crossAxisAlignment: WrapCrossAlignment.center,
                         spacing: 32,
                         children: [
-                          Image.asset('images/logo.png', height: 90),
+                          Image.asset('assets/images/logo.png', height: 90),
                           Text(
                             'explain_header'.tr(),
                             textAlign: TextAlign.center,

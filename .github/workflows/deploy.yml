@@ -16,3 +16,6 @@ jobs:
         run: flutter build web --release --base-href /DokkaebiImage/
       - name: Deploy to GitHub Pages
         uses: bluefireteam/flutter-gh-pages@v7
+        with:
+          baseHref: /DokkaebiImage/
+          build: false

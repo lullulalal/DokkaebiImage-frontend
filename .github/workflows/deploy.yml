@@ -13,6 +13,6 @@ jobs:
         with:
           channel: stable
       - name: Build flutter web app
-        run: flutter build web --release --base-href='/DokkaebiImage/'
+        run: flutter build web --release --base-href="/DokkaebiImage/"
       - name: Deploy to GitHub Pages
         uses: bluefireteam/flutter-gh-pages@v9
